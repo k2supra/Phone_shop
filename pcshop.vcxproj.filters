@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="main">
+      <UniqueIdentifier>{12254012-4830-4c0a-9936-941816ee9f69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{6cef3325-1d1c-4b6d-8a50-7ee77eecb4e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core">
+      <UniqueIdentifier>{9fee286b-2a5a-43c3-83d6-613110eb794d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{693c134a-1ffb-4ab6-bf2d-aea7349ed3be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lib">
+      <UniqueIdentifier>{1af3470f-4d6b-4466-bc8d-750673d55da5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui\screen">
+      <UniqueIdentifier>{da086292-d1d6-47e9-9fb7-cf882b0990b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui\screen\client">
+      <UniqueIdentifier>{b89db590-765d-4e3d-b1dc-1122f926f7d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\user">
+      <UniqueIdentifier>{2893291f-c2e1-4e66-9277-d500c3e70636}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\user_provider">
+      <UniqueIdentifier>{01779835-df44-4e36-8760-eac6021ecc07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\phone">
+      <UniqueIdentifier>{824922e2-55c0-4f76-8b4c-acbf72e47c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="core\phone_provider">
+      <UniqueIdentifier>{41b528b0-6d93-49e6-b2d2-59dbc8657a3d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\screen\client\client_screen.cpp">
+      <Filter>ui\screen\client</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\screen\screen.cpp">
+      <Filter>ui\screen</Filter>
+    </ClCompile>
+    <ClCompile Include="core\pc_provider\phone_provider.cpp">
+      <Filter>core\phone_provider</Filter>
+    </ClCompile>
+    <ClCompile Include="core\pc\phone.cpp">
+      <Filter>core\phone</Filter>
+    </ClCompile>
+    <ClCompile Include="core\user\user.cpp">
+      <Filter>core\user</Filter>
+    </ClCompile>
+    <ClCompile Include="core\user_provider\user_provider.cpp">
+      <Filter>core\user_provider</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ui\screen\client\client_screen.h">
+      <Filter>ui\screen\client</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\screen\screen.h">
+      <Filter>ui\screen</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\lib.h">
+      <Filter>lib</Filter>
+    </ClInclude>
+    <ClInclude Include="core\pc_provider\phone_provider.h">
+      <Filter>core\phone_provider</Filter>
+    </ClInclude>
+    <ClInclude Include="core\pc\phone.h">
+      <Filter>core\phone</Filter>
+    </ClInclude>
+    <ClInclude Include="core\user\user.h">
+      <Filter>core\user</Filter>
+    </ClInclude>
+    <ClInclude Include="core\user_provider\user_provider.h">
+      <Filter>core\user_provider</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="data\phonedata.csv">
+      <Filter>data</Filter>
+    </None>
+    <None Include="data\userdata.csv">
+      <Filter>data</Filter>
+    </None>
+  </ItemGroup>
+</Project>

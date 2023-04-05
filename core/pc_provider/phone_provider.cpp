@@ -1,28 +1,28 @@
 #include "phone_provider.h"
 
-void PCProvider::printPC(PC const *pc) const
+void PhoneProvider::printPhone(Phone const *ph) const
 {
-	cout << "Brand            : " << pc->getBrand() << '\n';
-	cout << "Model            : " << pc->getModel() << '\n';
-	cout << "Color            : " << pc->getColor() << '\n';
-	cout << "RAM              : " << pc->getRam() << '\n';
-	cout << "Storage          : " << pc->getStorage() << '\n';
-	cout << "FPS              : " << pc->getFps() << '\n';
-	cout << "Operating system : " << pc->getOperatingSystem() << '\n';
-	cout << "Price            : " << pc->getPrice() << "$\n\n";
+	cout << "Brand            : " << ph->getBrand() << '\n';
+	cout << "Model            : " << ph->getModel() << '\n';
+	cout << "Color            : " << ph->getColor() << '\n';
+	cout << "RAM              : " << ph->getRam() << '\n';
+	cout << "Storage          : " << ph->getStorage() << '\n';
+	cout << "FPS              : " << ph->getFps() << '\n';
+	cout << "Operating system : " << ph->getOperatingSystem() << '\n';
+	cout << "Price            : " << ph->getPrice() << "$\n\n";
 }
 
 
-void PCProvider::printMenuPC(PC const *pc) const
+void PhoneProvider::printMenuPhone(Phone const *ph) const
 {
-	cout << '#' << pc->getId() << ' ' << pc->getBrand() << ' ' << pc->getModel() << '\n'; // add index
-	cout << "\tFPS     : " << pc->getFps() << '\n';
-	cout << "\tStorage : " << pc->getStorage() << '\n';
-	cout << "\tRAM     : " << pc->getRam() << '\n';
-	cout << pc->getPrice() << "$\n";
+	cout << '#' << ph->getId() << ' ' << ph->getBrand() << ' ' << ph->getModel() << '\n';
+	cout << "\tFPS     : " << ph->getFps() << '\n';
+	cout << "\tStorage : " << ph->getStorage() << '\n';
+	cout << "\tRAM     : " << ph->getRam() << '\n';
+	cout << ph->getPrice() << "$\n";
 }
 
-void PCProvider::readPCData(vector<PC> &pcdata, const string &filename) const
+void PhoneProvider::readPhoneData(vector<Phone> &phdata, const string &filename) const
 {
 	std::ifstream file(filename);
 	if (file.is_open())
@@ -46,7 +46,7 @@ void PCProvider::readPCData(vector<PC> &pcdata, const string &filename) const
 			getline(ss, operatingSystem, ',');
 			ss >> price;
 			ss.ignore();
-			pcdata.emplace_back(i, brand, model, color, ram, storage, fps, operatingSystem, price);
+			phdata.emplace_back(i, brand, model, color, ram, storage, fps, operatingSystem, price);
 			i++;
 		}
 		file.close();

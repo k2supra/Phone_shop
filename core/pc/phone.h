@@ -1,7 +1,7 @@
 #pragma once
 #include "../../lib/lib.h"
 
-struct PC
+struct Phone
 {
 public:
 	// setters
@@ -27,19 +27,19 @@ public:
 	int getPrice() const;
 
 	// constructors
-	PC();
-	explicit PC(const string &b);
-	PC(const string &b, const string &m);
-	PC(const string &b, const string &m, const string &c);
-	PC(const string &b, const string &m, const string &c, int r);
-	PC(const string &b, const string &m, const string &c, int r, int s);
-	PC(const string &b, const string &m, const string &c, int r, int s, int f);
-	PC(const string &b, const string &m, const string &c, int r, int s, int f, const string &os);
-	PC(const string &b, const string &m, const string &c, int r, int s, int f, const string &os, int pr);
-	PC(uint64_t i, const string &b, const string &m, const string &c, int r, int s, int f, const string &os, int pr);
+	Phone();
+	explicit Phone(const string &b);
+	Phone(const string &b, const string &m);
+	Phone(const string &b, const string &m, const string &c);
+	Phone(const string &b, const string &m, const string &c, int r);
+	Phone(const string &b, const string &m, const string &c, int r, int s);
+	Phone(const string &b, const string &m, const string &c, int r, int s, int f);
+	Phone(const string &b, const string &m, const string &c, int r, int s, int f, const string &os);
+	Phone(const string &b, const string &m, const string &c, int r, int s, int f, const string &os, int pr);
+	Phone(uint64_t i, const string &b, const string &m, const string &c, int r, int s, int f, const string &os, int pr);
 
 	// destructors
-	~PC();
+	~Phone();
 
 private:
 	uint64_t id;

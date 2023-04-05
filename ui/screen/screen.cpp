@@ -62,7 +62,7 @@ void Screen::login()
 
 	if (!user_provider->userExists(current_user, userdata))
 	{
-		cout << "Error: there is no such user or your input is wrong!\n";
+		cout << "ERROR!\n";
 		return;
 	}
 

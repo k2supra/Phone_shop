@@ -7,8 +7,8 @@
 struct Screen
 {
 public:
-	void reg();   // register
-	void login(); // login
+	void reg();
+	void login();
 
 private:
 	ClientScreen *client_screen;

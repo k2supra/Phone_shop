@@ -1,36 +1,36 @@
 ﻿#include "client_screen.h"
 #include "../screen.h"
 
-void ClientScreen::displayPage(vector<PC> &pcList, int startIndex, int endIndex)
+void ClientScreen::displayPage(vector<Phone> &phList, int startIndex, int endIndex)
 {
-	auto const *pc_provider = new PCProvider();
-	for (int i = startIndex; i < endIndex && i < pcList.size(); i++) {
-		pc_provider->printMenuPC(&pcList[i]);
+	auto const *ph_provider = new PhoneProvider();
+	for (int i = startIndex; i < endIndex && i < phList.size(); i++) {
+		ph_provider->printMenuPhone(&phList[i]);
 	}
-	delete pc_provider;
+	delete ph_provider;
 }
 
 void ClientScreen::menu()
 {
-	auto const *pc_provider = new PCProvider();
+	auto const *ph_provider = new PhoneProvider();
 
-	vector<PC> pcdata;
-	pc_provider->readPCData(pcdata);
+	vector<Phone> phdata;
+	ph_provider->readPhoneData(phdata);
 
 	int pageNum = 0;
-	int possiblePages = pcdata.size() / PAGE_SIZE;
-	(pcdata.size() % PAGE_SIZE != 0) ? possiblePages++ : possiblePages = possiblePages;
+	int possiblePages = phdata.size() / PAGE_SIZE;
+	(phdata.size() % PAGE_SIZE != 0) ? possiblePages++ : possiblePages = possiblePages;
 	int startIndex = pageNum * PAGE_SIZE;
 	int endIndex = (pageNum + 1) * PAGE_SIZE;
 	while (true) {
 		cout << "\n<-------------- PAGE " << pageNum + 1 << " ---------------->\n";
-		displayPage(pcdata, startIndex, endIndex);
+		displayPage(phdata, startIndex, endIndex);
 		cout << "<---                              --->\n  w                                 e  \nc - cart\nq - exit\n";
 		cout << "Input action -> ";
 		string action;
 		cin >> action;
 		std::stringstream ss1(action);
-		std::stringstream ss2(action); // tried to do it with one ss, but it didn't work
+		std::stringstream ss2(action);
 		int num;
 		char ch;
 		ss1 >> num;
@@ -44,20 +44,20 @@ void ClientScreen::menu()
 		else if (ch == 'q') {
 			break;
 		}
-		if (num > 0 && num < pcdata.size() + 1)
+		if (num > 0 && num < phdata.size() + 1)
 		{
 			system("cls");
 
-			PC *curr_pc = &pcdata[num - 1];
+			Phone*curr_ph = &phdata[num - 1];
 
-			pc_provider->printPC(curr_pc);
+			ph_provider->printPhone(curr_ph);
 			char input;
 			cout << "b - buy\nq - exit\n\nInput action -> ";
 			cin >> input;
 			if (input == 'b')
 			{
 				system("cls");
-				pc_provider->printPC(curr_pc);
+				ph_provider->printPhone(curr_ph);
 				cout << "\n<-------------- BUYING ---------------->\n";
 				cout << "Enter your address      : ";
 				string address;
@@ -88,7 +88,7 @@ void ClientScreen::menu()
 		endIndex = (pageNum + 1) * PAGE_SIZE;
 	}
 
-	delete pc_provider;
+	delete ph_provider;
 }
 
 

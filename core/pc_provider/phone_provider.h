@@ -1,11 +1,11 @@
 #pragma once
 #include "../pc/phone.h"
 
-struct PCProvider
+struct PhoneProvider
 {
-	void printPC(PC const *pc) const;
-	void printMenuPC(PC const *pc) const;
-	void readPCData(vector<PC> &pcdata, const string &filename = "data/phonedata.csv") const;
+	void printPhone(Phone const *ph) const;
+	void printMenuPhone(Phone const *ph) const;
+	void readPhoneData(vector<Phone> &phdata, const string &filename = "data/phonedata.csv") const;
 };
 
 

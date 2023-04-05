@@ -6,7 +6,7 @@
 struct ClientScreen
 {
 public:
-	void displayPage(vector<PC> &pcList, int startIndex, int endIndex);
+	void displayPage(vector<Phone> &phList, int startIndex, int endIndex);
 	void menu();
 
 private:

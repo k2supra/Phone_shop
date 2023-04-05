@@ -2,7 +2,6 @@
 
 void UserProvider::addUser(User const *user, const string &filename) const	
 {
-	// check if name already exists
 	bool nameExists = false;
 	std::ifstream infile;
 	infile.open(filename);

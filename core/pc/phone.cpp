@@ -1,97 +1,97 @@
 #include "phone.h"
 
 // setters
-void PC::setId(uint64_t i)
+void Phone::setId(uint64_t i)
 {
 	id = i;
 }
 
-void PC::setBrand(const string &b)
+void Phone::setBrand(const string &b)
 {
 	brand = b;
 }
 
-void PC::setModel(const string &m) 
+void Phone::setModel(const string &m)
 {
 	model = m;
 }
 
-void PC::setColor(const string &c) 
+void Phone::setColor(const string &c)
 {
 	color = c;
 }
 
-void PC::setRam(int r) 
+void Phone::setRam(int r)
 {
 	ram = r;
 }
 
-void PC::setStorage(int s) 
+void Phone::setStorage(int s)
 {
 	storage = s;
 }
 
-void PC::setFps(int f) 
+void Phone::setFps(int f)
 {
 	fps = f;
 }
 
-void PC::setOperatingSystem(const string &os) 
+void Phone::setOperatingSystem(const string &os)
 {
 	operatingSystem = os;
 }
-void PC::setPrice(int pr)
+void Phone::setPrice(int pr)
 {
 	price = pr;
 }
 
 // getters
-uint64_t PC::getId() const
+uint64_t Phone::getId() const
 {
 	return id;
 }
 
-string PC::getBrand() const
+string Phone::getBrand() const
 {
 	return brand;
 }
 
-string PC::getModel() const
+string Phone::getModel() const
 {
 	return model;
 }
 
-string PC::getColor() const
+string Phone::getColor() const
 {
 	return color;
 }
 
-int PC::getRam() const
+int Phone::getRam() const
 {
 	return ram;
 }
 
-int PC::getStorage() const
+int Phone::getStorage() const
 {
 	return storage;
 }
 
-int PC::getFps() const
+int Phone::getFps() const
 {
 	return fps;
 }
 
-string PC::getOperatingSystem() const
+string Phone::getOperatingSystem() const
 {
 	return operatingSystem;
 }
-int PC::getPrice() const
+int Phone::getPrice() const
 {
 	return price;
 }
 
 // constructors
-PC::PC()
+Phone::Phone()
 {
 	setId(0);
 	setBrand("null");
@@ -103,45 +103,45 @@ PC::PC()
 	setOperatingSystem("null");
 	setPrice(0);
 }
-PC::PC(const string &b) : PC()
+Phone::Phone(const string &b) : Phone()
 {
 	setBrand(b);
 }
-PC::PC(const string &b, const string &m) : PC(b)
+Phone::Phone(const string &b, const string &m) : Phone(b)
 {
 	setModel(m);
 }
-PC::PC(const string &b, const string &m, const string &c) : PC(b, m)
+Phone::Phone(const string &b, const string &m, const string &c) : Phone(b, m)
 {
 	setColor(c);
 }
-PC::PC(const string &b, const string &m, const string &c, int r) : PC(b, m, c)
+Phone::Phone(const string &b, const string &m, const string &c, int r) : Phone(b, m, c)
 {
 	setRam(r);
 }
-PC::PC(const string &b, const string &m, const string &c, int r, int s) : PC(b, m, c, r)
+Phone::Phone(const string &b, const string &m, const string &c, int r, int s) : Phone(b, m, c, r)
 {
 	setStorage(s);
 }
-PC::PC(const string &b, const string &m, const string &c, int r, int s, int f) : PC(b, m, c, r, s)
+Phone::Phone(const string &b, const string &m, const string &c, int r, int s, int f) : Phone(b, m, c, r, s)
 {
 	setFps(f);
 }
-PC::PC(const string &b, const string &m, const string &c, int r, int s, int f, const string &os) : PC(b, m, c, r, s, f)
+Phone::Phone(const string &b, const string &m, const string &c, int r, int s, int f, const string &os) : Phone(b, m, c, r, s, f)
 {
 	setOperatingSystem(os);
 }
-PC::PC(const string &b, const string &m, const string &c, int r, int s, int f, const string &os, int pr) : PC(b, m, c, r, s, f, os)
+Phone::Phone(const string &b, const string &m, const string &c, int r, int s, int f, const string &os, int pr) : Phone(b, m, c, r, s, f, os)
 {
 	setPrice(pr);
 }
-PC::PC(uint64_t i, const string &b, const string &m, const string &c, int r, int s, int f, const string &os, int pr) : PC(b, m, c, r, s, f, os, pr)
+Phone::Phone(uint64_t i, const string &b, const string &m, const string &c, int r, int s, int f, const string &os, int pr) : Phone(b, m, c, r, s, f, os, pr)
 {
 	setId(i);
 }
 
 // destructors
-PC::~PC()
+Phone::~Phone()
 {
 	id = 0;
 	brand = "null";
